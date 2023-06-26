@@ -15,7 +15,6 @@ export default function NewMeetupPage(){
         });
         const data = await response.json();
 
-        console.log('data :', data);
         await router.push('/');
     }
     return <NewMeetupForm onAddMeetup={addMeetupHandler} />
