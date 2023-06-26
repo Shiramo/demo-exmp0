@@ -54,6 +54,7 @@ export async function getStaticProps(context) {
                 description: selectedMeetup.description,
                 address: selectedMeetup.address,
             },
-        }
+        },
+        revalidate: 1
     };
 }
