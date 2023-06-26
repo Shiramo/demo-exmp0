@@ -32,8 +32,7 @@ export async function getStaticPaths(filter, options) {
 }
 
 export async function getStaticProps(context) {
-    const meetupId = context.params.meetupId;
-    console.log('meetupId :', meetupId);
+    const meetupId = context.params.meetupId.toString();
 
     const client = await MongoClient.connect('mongodb+srv://ozhytar:1Shiramo4688cl1@cluster0.hc3gyhn.mongodb.net/meetup?retryWrites=true&w=majority')
     const db = client.db();
@@ -41,12 +40,14 @@ export async function getStaticProps(context) {
     const meetupsConnection = db.collection('meetups');
     let selectedMeetup = await meetupsConnection.findOne({_id: new ObjectId(meetupId)})
 
+    const meetupIdString = selectedMeetup._id.toString();
+
     await client.close();
 
     return {
         props: {
             meetupDate: {
-                id: selectedMeetup._id.toString(),
+                id: meetupIdString,
                 title: selectedMeetup.title,
                 image: selectedMeetup.image,
                 description: selectedMeetup.description,
