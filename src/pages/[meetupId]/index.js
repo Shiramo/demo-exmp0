@@ -1,21 +1,11 @@
-import {useRouter} from "next/router";
 import {Fragment} from "react";
 import MeetupDetail from "@/components/meetups/MeetupDetail";
 import {MongoClient, ObjectId} from "mongodb";
-import Head from "next/head";
 
 
 export default function MeetupDetailsPage(props) {
-    // const router = useRouter()
-    //
-    // console.log(router.query.newsId);
-
     return (
         <Fragment>
-            <Head>
-                <link rel='icon' href={props.meetupDate.image} />
-                <title>{props.meetupDate.title}</title>
-            </Head>
             <MeetupDetail
                 image={props.meetupDate.image}
                 title={props.meetupDate.title}

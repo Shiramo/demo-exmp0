@@ -1,4 +1,3 @@
-import Link from "next/link";
 import NewMeetupForm from "@/components/meetups/NewMeetupForm";
 import {useRouter} from "next/router";
 

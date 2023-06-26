@@ -8,7 +8,7 @@ export default function HomePage(props) {
 
     return <Fragment>
         <Head>
-            <link rel='icon'href='/head.ico' />
+            <link rel='icon' href='/head.ico' />
             <title>NextJs Meetups</title>
             <meta
                 name='description'
@@ -19,17 +19,6 @@ export default function HomePage(props) {
         <MeetupList meetups={props.meetups}/>
     </Fragment>
 }
-
-// export async function getServerSideProps(context) {
-//     const request = context.req;
-//     const response = context.res;
-//
-//     return {
-//         props: {
-//             meetups: DUMMY_MEETUPS
-//         }
-//     };
-// }
 
 export async function getStaticProps() {
     const client = await MongoClient.connect('mongodb+srv://ozhytar:1Shiramo4688cl1@cluster0.hc3gyhn.mongodb.net/meetup?retryWrites=true&w=majority')
