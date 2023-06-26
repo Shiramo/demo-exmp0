@@ -12,7 +12,6 @@ export default function MeetupDetailsPage(props) {
                 description={props.meetupDate.description}
                 address={props.meetupDate.address}
             />
-            <button>HERE Y R</button>
         </Fragment>
     );
 }
