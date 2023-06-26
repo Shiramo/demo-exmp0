@@ -17,7 +17,7 @@ export default function MeetupDetailsPage(props) {
     );
 }
 
-export async function getStaticPaths(filter, options) {
+export async function getStaticPaths() {
     const client = await MongoClient.connect('mongodb+srv://ozhytar:1Shiramo4688cl1@cluster0.hc3gyhn.mongodb.net/meetup?retryWrites=true&w=majority')
     const db = client.db();
 
