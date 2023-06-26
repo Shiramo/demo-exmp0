@@ -12,7 +12,7 @@ export default function MeetupDetailsPage(props) {
                 description={props.meetupDate.description}
                 address={props.meetupDate.address}
             />
-            <button>Bubble 5</button>
+            <button>Bubble 6</button>
         </Fragment>
     );
 }
@@ -25,7 +25,7 @@ export async function getStaticPaths(filter, options) {
     const meetups = await meetupsConnection.find().toArray();
 
     return {
-        fallback: true,
+        fallback: false,
         paths: meetups.map((meetup) => ({
             params: {meetupId: meetup._id.toString() },
         }))
