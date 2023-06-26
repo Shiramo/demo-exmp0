@@ -7,7 +7,6 @@ export default function MeetupDetailsPage(props) {
     return (
         <Fragment>
             <MeetupDetail
-                image={props.meetupDate.image}
                 title={props.meetupDate.title}
                 description={props.meetupDate.description}
                 address={props.meetupDate.address}
@@ -50,7 +49,6 @@ export async function getStaticProps(context) {
             meetupDate: {
                 id: selectedMeetup._id.toString(),
                 title: selectedMeetup.title,
-                image: selectedMeetup.image,
                 description: selectedMeetup.description,
                 address: selectedMeetup.address,
             },
