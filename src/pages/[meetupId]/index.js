@@ -12,7 +12,7 @@ export default function MeetupDetailsPage(props) {
                 description={props.meetupDate.description}
                 address={props.meetupDate.address}
             />
-            <button>Bubble 1</button>
+            <button>Bubble 2</button>
         </Fragment>
     );
 }
