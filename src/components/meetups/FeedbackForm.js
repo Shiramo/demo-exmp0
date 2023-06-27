@@ -5,26 +5,10 @@ import classes from './NewMeetupForm.module.css';
 
 function FeedbackForm(props) {
     const titleInputRef = useRef();
-    // const imageInputRef = useRef();
-    // const addressInputRef = useRef();
-    // const descriptionInputRef = useRef();
-
     function submitHandler(event) {
         event.preventDefault();
 
         const enteredMessage = titleInputRef.current.value;
-
-        console.log('FeedbackForm', enteredMessage);
-        // const enteredImage = imageInputRef.current.value;
-        // const enteredAddress = addressInputRef.current.value;
-        // const enteredDescription = descriptionInputRef.current.value;
-
-        // const meetupData = {
-        //     title: enteredTitle,
-        //     image: enteredImage,
-        //     address: enteredAddress,
-        //     description: enteredDescription,
-        // };
 
         const meetupData = {
             message: enteredMessage,

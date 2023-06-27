@@ -1,7 +1,5 @@
 import classes from './MainNavigation.module.css';
 import Link from "next/link";
-import NewsletterSignup from "@/components/meetups/FeedbackForm";
-import FeedbackForm from "@/components/meetups/FeedbackForm";
 
 function MainNavigation() {
 
